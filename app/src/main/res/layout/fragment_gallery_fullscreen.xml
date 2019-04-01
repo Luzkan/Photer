@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/pictureDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7f000000"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:gravity="center"
+        tools:text="Title"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@android:style/Widget.Holo.RatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:stepSize="1" />
+
+    <TextView
+        android:id="@+id/cheatingIdEasyWayImTiredImSorry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating (Place)"
+        android:textColor="@android:color/white"
+        android:textSize="50sp"
+        android:visibility="invisible"
+        tools:ignore="SmallSp" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/pictureDescription"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#7f000000"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textSize="16sp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:padding="10dp"-->
+        <!--android:gravity="center"-->
+        <!--tools:text="Description"-->
+        <!--android:layout_above="@+id/pictureRating"-->
+        <!--android:layout_below="@+id/pictureTitle" />-->
+
+    <!--<RatingBar-->
+        <!--android:id="@+id/pictureRating"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:gravity="center"-->
+        <!--android:padding="5dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:numStars="3"-->
+        <!--android:stepSize=".5" />-->
+
+
+
+</RelativeLayout>
