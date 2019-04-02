@@ -33,6 +33,12 @@
                 android:title="@string/add"
                 android:icon="@drawable/ic_add">
             </item>
+            <item
+                android:id="@+id/action_photo"
+                android:orderInCategory="400"
+                android:title="@string/makepic"
+                android:icon="@drawable/ic_makepic">
+            </item>
         </menu>
     </item>
 </menu>

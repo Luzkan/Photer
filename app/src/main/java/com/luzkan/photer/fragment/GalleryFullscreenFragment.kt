@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import android.widget.RatingBar
 import android.widget.TextView
 import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.luzkan.photer.MainActivity
 import com.luzkan.photer.R
 import com.luzkan.photer.adapter.Image
 import com.luzkan.photer.data.local.PhotoListDatabase.Companion.photoListDatabase
@@ -56,14 +57,7 @@ class GalleryFullscreenFragment: DialogFragment() {
                         val photo = photoListDatabase!!.getPhoto().getPhotoItem(fId.text.toString().toInt())
                         photo.rating = fRating.rating.toInt()
                         photoListDatabase!!.getPhoto().updatePhoto(photo)
-
-                        // Sorts automatically after rating was made
-                        imageList.clear()
-                        for(Photo in photoListDatabase!!.getPhoto().getPhotoListRatingSorted()){
-                            imageList.add(Image(photoListDatabase!!.getPhoto().getPhotoItem(Photo.tId).url, photoListDatabase!!.getPhoto().getPhotoItem(Photo.tId).description, photoListDatabase!!.getPhoto().getPhotoItem(Photo.tId).rating, photoListDatabase!!.getPhoto().getPhotoItem(Photo.tId).tId))
-                        }
-
-                        // TODO: CALL ADAPTER IN MAINACTIVITY.
+                        (activity as MainActivity).reloadRecyclerView()
                     }
                 }
 

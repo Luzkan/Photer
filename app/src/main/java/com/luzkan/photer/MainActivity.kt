@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity(), GalleryImageClickListener {
         galleryAdapter.listener = this
     }
 
-    private fun reloadRecyclerView(){
+    fun reloadRecyclerView(){
         loadImages()
         recyclerView.layoutManager = GridLayoutManager(this, columns)
         recyclerView.adapter = galleryAdapter
@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity(), GalleryImageClickListener {
     }
 
     // Adding new Image to Database
-    fun showCreateCategoryDialog() {
+    private fun showCreateCategoryDialog() {
         val context = this
         val builder = AlertDialog.Builder(context)
         builder.setTitle("Add New Image")
